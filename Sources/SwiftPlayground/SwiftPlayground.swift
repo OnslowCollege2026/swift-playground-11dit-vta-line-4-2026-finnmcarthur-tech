@@ -38,5 +38,20 @@ struct SwiftPlayground {
         var studentYear: Int8 = 11
 
         print("There is a \(studentAge) year old year \(studentYear) student in \(schoolName), who studies for \(schooltime) hours each day.\nTheir name is \(studentName)")
+
+        // this is the maths bit
+        let x = 3.14159265358979323
+        let y = 6.28318530717958647
+
+        let added = x + y
+        let subtracted = x - y
+        let multiplied = x * y
+        let divided = x / y
+        let remainder = x.truncatingRemainder(dividingBy: y)
+        let subtracted2 = y - x
+        let divided2 = y / x
+        let remainder2 = y.truncatingRemainder(dividingBy: x)
+
+        print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
     }
 }
