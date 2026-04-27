@@ -53,5 +53,16 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        //this is task 3
+        var dogAge = 6
+        // this does the maths to make it only the first 2 years of the dog's age, and not account for what comes after
+        let earlyYears = 21 * (dogAge - (2 - dogAge))
+        // this ignores the first 2 years instead of counting them
+        let lateYears = 4 * (dogAge - 2)
+        // this combines earlyYears and lateYears
+        let dogYears = earlyYears + lateYears
+        print("Your dog is \(dogAge) in human years and \(dogYears) in dog years.")
+
     }
 }
