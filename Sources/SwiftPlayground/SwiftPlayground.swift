@@ -53,5 +53,12 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        // this is task 1 of the maths section
+        // this is a constant Double called amount, which stores 18.5 
+        let amount = 18.5
+        // this is a constant Double defined using amount / 5.0,
+        let tip = amount/5.0
+        print(tip)
     }
 }
