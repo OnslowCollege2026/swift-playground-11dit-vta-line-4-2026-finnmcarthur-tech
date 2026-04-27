@@ -59,6 +59,17 @@ struct SwiftPlayground {
         let amount = 18.5
         // this is a constant Double defined using amount / 5.0,
         let tip = amount/5.0
+        // this prints tip, which is 3.7
         print(tip)
+
+        // this is task 2 of the maths section
+        // this is the quantity of milk in litres
+        var milkQuantity = 20.0
+        // this is the usage of milk per latte, in litres
+        let latteMilkUsage = 0.2
+        // this reduces milkQuantity by latteMilkUsage multiplied by the lattes bought
+        milkQuantity -= latteMilkUsage*25
+        // this prints the remaining milk quantity after the order
+        print("There is \(milkQuantity)L of milk left.")
     }
 }
