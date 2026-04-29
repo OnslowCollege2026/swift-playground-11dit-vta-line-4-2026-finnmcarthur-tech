@@ -53,5 +53,20 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        //this bit is the input task
+        print("Input a singular noun")
+        let aNoun = readLine()!
+        print("Now, an adjective")
+        let anAdjective = readLine()!
+        print("A preposition")
+        let aPreposition = readLine()!
+        print("A verb, in past tense")
+        let aVerb = readLine()!
+        print("Another noun, plural")
+        let anotherNoun = readLine()!
+        print("Lastly, an adverb")
+        let anAdverb = readLine()!
+        print("There once was a \(anAdjective) \(aNoun), which while \(aPreposition) \(anotherNoun) \(aVerb) \(anAdverb).")
     }
 }
