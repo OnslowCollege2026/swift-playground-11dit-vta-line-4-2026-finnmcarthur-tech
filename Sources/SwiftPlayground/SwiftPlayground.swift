@@ -64,7 +64,7 @@ struct SwiftPlayground {
         // the next 4 lines give arbitrary boolean evaluation of the 3 values
         let isCBig = c >= b
         let isASlightlySmall = a <= b && a > 20
-        let isAEvenOrBOdd = (a % 2) == 0 || (b % 2) != 0
+        let isAOddOrBEven = (a % 2) != 0 || (b % 2) == 0
         let isCOddOrBig = (c % 2) != 0 || c > 50
         // this checks if all 4 requirements are met
         let z = isCBig && isASlightlySmall && isAEvenOrBOdd && isCOddOrBig
