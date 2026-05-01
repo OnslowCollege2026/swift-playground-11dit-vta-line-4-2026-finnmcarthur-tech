@@ -53,5 +53,14 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        // these lines acquire the input of the user for 2 integers
+        print("input an integer")
+        let a = Int(readLine()!)!
+        print("input another integer")
+        let b = Int(readLine()!)!
+        let c = a + b
+        
+        
     }
 }
