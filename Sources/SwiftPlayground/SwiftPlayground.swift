@@ -53,5 +53,11 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+        
+        print("Enter your age without commas and as a whole number")
+        var userInput = readLine()!
+        let age = Int(userInput)!
+        let isOldEnough = age >= 18
+        print(isOldEnough)
     }
 }
