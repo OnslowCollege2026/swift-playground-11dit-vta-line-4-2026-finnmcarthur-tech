@@ -54,10 +54,16 @@ struct SwiftPlayground {
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
         
+        // this is the first task for booleans
+        // this asks the user to input their age, and to follow the neccessary steps to not crash the program
         print("Enter your age without commas and as a whole number")
+        // this takes their input
         var userInput = readLine()!
+        // this defines their age as the integer of their age
         let age = Int(userInput)!
+        // this evaluates if their age is >= 18
         let isOldEnough = age >= 18
+        // this prints the bool
         print(isOldEnough)
     }
 }
