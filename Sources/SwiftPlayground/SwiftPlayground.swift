@@ -63,7 +63,11 @@ struct SwiftPlayground {
         let age = Int(userInput)!
         // this evaluates if their age is >= 18
         let isOldEnough = age >= 18
-        // this prints the bool
-        print(isOldEnough)
+        // this asks for the password
+        print("Enter the password")
+        userInput = readLine()!
+        let isPasswordCorrect = userInput == "Password123"
+        let isAllowedIn = isPasswordCorrect && isOldEnough
+        print(isAllowedIn)
     }
 }
