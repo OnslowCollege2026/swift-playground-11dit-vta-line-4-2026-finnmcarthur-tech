@@ -67,7 +67,7 @@ struct SwiftPlayground {
         let isAOddOrBEven = (a % 2) != 0 || (b % 2) == 0
         let isCOddOrBig = (c % 2) != 0 || c > 50
         // this checks if all 4 requirements are met
-        let z = isCBig && isASlightlySmall && isAEvenOrBOdd && isCOddOrBig
+        let z = isCBig && isASlightlySmall && isAOddOrBEven && isCOddOrBig
         // this prints the result
         print(z)
     }
