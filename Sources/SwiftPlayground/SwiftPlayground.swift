@@ -64,7 +64,7 @@ struct SwiftPlayground {
         // the first conditional checks if the grade is invalid
         if score > 100 || score < 0 {
                 // this informs the user of an invalid grade of the >100 variety
-                if score > 100 {print("Wow, quite the score. Please enter a valid grade though.")} 
+                if score > 100 {print("Wow, quite the number. Please enter a valid grade though.")} 
                 // this informs the user of an invalid grade of the <0 variety
                 else if score < 0 {print("It is quite literally impossible to score that badly")}
         // this informs the user of a valid, outstanding score, if it is a fitting description of their score
