@@ -53,5 +53,35 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        print("Enter your grade")
+        var userInput = readLine()!
+        var score = Int(userInput)!
+        if score > 100 || score < 0 {
+                if score > 100 {print("Wow, quite the score. Please enter a valid grade though.")} 
+                else if score < 0 {print("It is quite literally impossible to score that badly")}
+        } else if score >= 90 {
+                print("Outstanding performance!")
+        } else if score >= 85 {
+                print("Excellent perfomance!")
+        } else if score >= 80 {
+                print("Excellent performance in most respects")
+        } else if score >= 75 {
+                print("Very good performance")
+        } else if score >= 70 {
+                print("Good performance")
+        } else if score >= 65 {
+                print("Good performance overall, but with some weaknesses")
+        } else if score >= 60 {
+                print("Satisfactory to good performance")
+        } else if score >= 55 {
+                print("Satisfactory performance")
+        } else if score >= 50 {
+                print("Adequate evidence of learning")
+        } else if score >= 40 {
+                print("Poor performance overall, with some evidence of leanring. Still a fail.")
+        } else {
+                print("Well below the required standard. Certainly a fail.")
+        }
     }
 }
