@@ -54,34 +54,52 @@ struct SwiftPlayground {
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
 
+        // this instructs the user to enter their grade.
         print("Enter your grade")
+        // this collects the user's input
         var userInput = readLine()!
+        // this converts the input into an integer, unsafely
         var score = Int(userInput)!
+        // this large block of conditionals prints one output, depending on what grade was inputted
+        // the first conditional checks if the grade is invalid
         if score > 100 || score < 0 {
+                // this informs the user of an invalid grade of the >100 variety
                 if score > 100 {print("Wow, quite the score. Please enter a valid grade though.")} 
+                // this informs the user of an invalid grade of the <0 variety
                 else if score < 0 {print("It is quite literally impossible to score that badly")}
+        // this informs the user of a valid, outstanding score, if it is a fitting description of their score
         } else if score >= 90 {
-                print("Outstanding performance!")
+                print("A+, Outstanding performance!")
+        // this informs the user of their excellent performance, if their score is good enough
         } else if score >= 85 {
-                print("Excellent perfomance!")
+                print("A, Excellent perfomance!")
+        // this informs the user of their largely excellent performance, if that is what their grade is
         } else if score >= 80 {
-                print("Excellent performance in most respects")
+                print("A-, Excellent performance in most respects")
+        // this prints "Very good performance" if their score reflects that
         } else if score >= 75 {
-                print("Very good performance")
+                print("B+, Very good performance")
+        // this informs the user of  their good performance, if that is what their score is
         } else if score >= 70 {
-                print("Good performance")
+                print("B, Good performance")
+        // this tells the user of their slightly lacking good performance, if score is >=65
         } else if score >= 65 {
-                print("Good performance overall, but with some weaknesses")
-        } else if score >= 60 {
-                print("Satisfactory to good performance")
+                print("B-, Good performance overall, but with some weaknesses")
+        // this outputs the satisfactory performance of a grade of <65 and >60
+        }else if score >= 60 {
+                print("C+, Satisfactory to good performance")
+        // it prints satisfactory performance if it should be described as such
         } else if score >= 55 {
-                print("Satisfactory performance")
+                print("C, Satisfactory performance")
+        // do i really need to explain every line?
+        // they all do the same thing with progressively smaller numbers
         } else if score >= 50 {
-                print("Adequate evidence of learning")
+                print("C-, Adequate evidence of learning")
         } else if score >= 40 {
-                print("Poor performance overall, with some evidence of leanring. Still a fail.")
+                print("D, Poor performance overall, with some evidence of leanring. Still a fail.")
+        // this prints, if nothing else would, the severely lacking nature of their grade
         } else {
-                print("Well below the required standard. Certainly a fail.")
+                print("E, Well below the required standard. Certainly a fail.")
         }
     }
 }
