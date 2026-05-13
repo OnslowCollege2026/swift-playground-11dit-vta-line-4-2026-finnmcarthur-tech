@@ -53,5 +53,56 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        // this stores the invitees
+        var invites: [String] = []
+        // this stores who needs to be removed
+        // looking back at my code this is kinda pointless
+        var removals: [String] = []
+        // this stores if each loop should be running
+        var isRunning = true
+        // this instructs the user on how to use the program
+        print("Please input the names of everyone you want to include\nAn empty input will conclude the listing")
+        // this while loop handles adding people
+        while isRunning {
+                // this gets the user's input and stores it in userInput
+                var userInput = readLine()!
+                // this if statement checks if the input isn't empty, and then adds the input
+                if userInput != "" {
+                        invites.append(userInput)
+                } // this else then stops the loop if it is empty
+                else {
+                        isRunning = false 
+                }
+        }
+        // this tells them who they invited
+        print("You have invited \(invites)\nPlease list who you want removed, and write nothing to conclude the removal")
+        // this resets isRunning for the next loop
+        isRunning = true
+        // this loop handles removing people
+        while isRunning {
+                // this gets the user's input, for removing purposes this time
+                var userInput = readLine()!
+                // this checks if their input is empty
+                if userInput == "" {
+                        // this stops the loop if so
+                        isRunning = false
+                } else {
+                        // otherwise it adds their input to the list of things to be removed
+                        removals.append(userInput)
+                }
+        }
+        // this runs for each item in removals
+        removals.forEach { i in
+                // if invites contains this item, it runs and defines index as that index
+                if let index = invites.firstIndex(of: i) {
+                        // this then removes that index
+                        invites.remove(at: index)
+                }
+        }
+        // this then prints every invite
+        invites.forEach { i in
+                print("You have invited \(i)")
+        }
     }
 }
