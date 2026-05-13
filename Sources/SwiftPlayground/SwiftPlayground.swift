@@ -101,8 +101,19 @@ struct SwiftPlayground {
                 }
         }
         // this then prints every invite
-        invites.forEach { i in
+        if invites.count > 0 && invites.count < 20 {
+                invites.forEach { i in
                 print("You have invited \(i)")
+                if invites.count < 6 {
+                        print("A small party")
+                } else {
+                        print("Quite the party")
+                }
+        } 
+        } else if invites.count > 0 {
+                print("That's too many people for one party")
+        } else {
+                print("You haven't invited anyone")
         }
     }
 }
