@@ -100,19 +100,31 @@ struct SwiftPlayground {
                         invites.remove(at: index)
                 }
         }
+        // this prints out different comments based on how many invitees there are
+        // this particular if condition guarantees the party is within the specified reasonable bounds
         if invites.count > 0 && invites.count < 20 {
+                // this prints the beginning of the invite message (which doesn't need to be repeated)
                 print("You invited:")
+                // this repeats for each invite, printing their index and name in order
                 invites.enumerated().forEach { index, i in
-                print("\(index + 1). \(i)") }
+                        print("\(index + 1). \(i)") 
+                }
+                // if the party is less than 6 people (typically 5, 4, 3, 2, 1, or 0) it comments on the lack of people
                 if invites.count < 6 {
                         print("A small party")
-                } else {
+                } // else it prints out a comment on the scale
+                else {
                         print("Quite the party")
-        }
+                }
+        // this then complains if the party is >0 and also >20 (because of the previous if condition)
         } else if invites.count > 0 {
                 print("That's too many people for one party")
-        } else {
+        // this then complains if there are exactly 0 people
+        } else if invites.count == 0{
                 print("You haven't invited anyone")
+        // this is just a backup message incase the user manages to somehow invite <0 people
+        } else {
+                print("You have serious messed up your invites. Perhaps try inviting at least 0 people?")
         }
     }
 }
