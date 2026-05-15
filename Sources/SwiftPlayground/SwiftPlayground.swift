@@ -53,5 +53,10 @@ struct SwiftPlayground {
         let remainder2 = y.truncatingRemainder(dividingBy: x)
 
         print("x + y = \(added)\nx - y = \(subtracted)\nx * y = \(multiplied)\nx / y = \(divided)\nx % y = \(remainder)\n\ny + x = \(added)\ny - x = \(subtracted2)\ny * x = \(multiplied)\ny / x = \(divided2)\ny % x = \(remainder2)")
+
+        let bearVictims = ["Tom", "Bob", "Jean"]
+        if bearVictims.contains("Goldilocks") {
+                print("Dang, they ate her")
+        }
     }
 }
